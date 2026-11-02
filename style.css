@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f6fa;
+    color: #202124;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 32px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 35px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #3867d6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#status {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+section {
+    margin-top: 30px;
+}
+
+#path {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.path-word {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.path-word span {
+    color: #777;
+}
+
+#connections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.connection {
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}

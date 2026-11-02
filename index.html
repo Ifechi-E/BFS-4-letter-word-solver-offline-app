@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Poople Library</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Poople">
+
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+
+<body>
+    <main>
+        <h1>PEasy Poople</h1>
+        <p class="subtitle">The 12 Disciples Guide Thyne Poople</p>
+
+        <form id="search-form">
+            <input
+                type="text"
+                id="word-input"
+                maxlength="4"
+                placeholder="Enter a word"
+                autocomplete="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="status">Loading dictionary...</p>
+
+        <section id="results" hidden>
+            <h2 id="result-word"></h2>
+            <p id="result-summary"></p>
+
+            <h3>Optimal path to POOP</h3>
+            <div id="path"></div>
+
+            <h3>Connections</h3>
+            <div id="connections"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
