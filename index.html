@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Poople Library</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-
-    <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Poople">
-
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poople Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Poople">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
-
 <body>
-    <main>
-        <h1>PEasy Poople</h1>
-        <p class="subtitle">The 12 Disciples Guide Thyne Poople</p>
-
-        <form id="search-form">
-            <input
-                type="text"
-                id="word-input"
-                maxlength="4"
-                placeholder="Enter a word"
-                autocomplete="off"
-                autocapitalize="characters"
-                spellcheck="false"
-                required
-            >
-            <button type="submit">Search</button>
-        </form>
-
-        <p id="status">Loading dictionary...</p>
-
-        <section id="results" hidden>
-            <h2 id="result-word"></h2>
-            <p id="result-summary"></p>
-
-            <h3>Optimal path to POOP</h3>
-            <div id="path"></div>
-
-            <h3>Connections</h3>
-            <div id="connections"></div>
-        </section>
-    </main>
-
-    <script src="app.js"></script>
+<main>
+  <h1>PEasy Poople</h1>
+  <p class="subtitle">The 11 Disciples Guide Thyne Poople</p>
+  <nav class="tabs" aria-label="Pages">
+    <button id="search-tab" class="tab active" type="button" aria-selected="true">Word Search</button>
+    <button id="sphincter-tab" class="tab" type="button" aria-selected="false">The Sphincter</button>
+    <button id="facts-tab" class="tab" type="button" aria-selected="false">Fun Facts</button>
+  </nav>
+  <div id="search-page">
+    <form id="search-form">
+      <input type="text" id="word-input" maxlength="4" placeholder="Enter a word" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+      <button type="submit">Search</button>
+    </form>
+    <p id="status" role="status">Loading dictionary...</p>
+    <section id="results" hidden>
+      <h2 id="result-word"></h2>
+      <p id="result-summary"></p>
+      <h3>Optimal path to POOP</h3>
+      <div id="path"></div>
+      <h3>Connections</h3>
+      <div id="connections"></div>
+    </section>
+  </div>
+  <div id="sphincter-page" hidden>
+    <h2>The Sphincter</h2>
+    <p class="description">Words exactly one move away from POOP.</p>
+    <p id="sphincter-count"></p>
+    <div id="sphincter-words" class="word-list"></div>
+  </div>
+  <div id="facts-page" hidden>
+    <h2>Fun Facts</h2>
+    <div id="facts-summary" class="stats"></div>
+    <h3 id="most-heading">Most connected words</h3>
+    <div id="most-connected" class="word-list"></div>
+    <h3 id="least-heading">Least connected words</h3>
+    <div id="least-connected" class="word-list"></div>
+    <h3>Unreachable words</h3>
+    <p id="unreachable-count"></p>
+    <div id="unreachable-words" class="word-list"></div>
+  </div>
+</main>
+<script src="app.js"></script>
 </body>
 </html>
